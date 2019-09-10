@@ -1,8 +1,6 @@
 #!groovy
 
 node {
-  def buildHost = docker.image('dhlparcel/dhl-parcel-build-sbt-env:latest')
-
   stage('Checkout') {
     checkout scm
   }
@@ -36,6 +34,6 @@ private void triggerDeploy(String tag, String environment) {
   build job: "DHL Parcel/dhl-parcel-deploy/master", wait: true, parameters: [
           [$class: 'StringParameterValue', name: 'ENVIRONMENT', value: environment],
           [$class: 'StringParameterValue', name: 'DOCKER_TAG', value: tag],
-          [$class: 'StringParameterValue', name: 'PLAYBOOK', value: 'print-service-deploy-azure']
+          [$class: 'StringParameterValue', name: 'PLAYBOOK', value: 'mc-router']
   ]
 }
