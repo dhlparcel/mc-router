@@ -34,6 +34,6 @@ private void triggerDeploy(String tag, String environment) {
   build job: "DHL Parcel/dhl-parcel-deploy/master", wait: true, parameters: [
           [$class: 'StringParameterValue', name: 'ENVIRONMENT', value: environment],
           [$class: 'StringParameterValue', name: 'DOCKER_TAG', value: tag],
-          [$class: 'StringParameterValue', name: 'PLAYBOOK', value: 'mc-router']
+          [$class: 'StringParameterValue', name: 'PLAYBOOK', value: 'mc-router-deploy-azure']
   ]
 }
