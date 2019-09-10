@@ -1,0 +1,20 @@
+ {
+   "pools": {
+      "A": {
+         "servers": [
+            // hosts of replicated pool, e.g.:
+           "172.17.0.1:9865",
+           "172.17.0.1:9867"
+         ]
+      }
+   },
+   "route": {
+     "type": "OperationSelectorRoute",
+     "operation_policies": {
+       "add": "AllSyncRoute|Pool|A",
+       "delete": "AllSyncRoute|Pool|A",
+       "get": "LatestRoute|Pool|A",
+       "set": "AllSyncRoute|Pool|A"
+     }
+   }
+ }

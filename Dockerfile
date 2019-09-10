@@ -14,4 +14,6 @@ RUN wget -O - https://facebook.github.io/mcrouter/debrepo/xenial/PUBLIC.KEY  | a
 		apt-get install -y mcrouter=$VERSION && \
 		apt-get clean
 
+COPY config.json /etc/mcrouter/config.json
+
 ENTRYPOINT ["mcrouter"]
