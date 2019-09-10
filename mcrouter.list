@@ -1,1 +1,1 @@
-deb https://facebook.github.io/mcrouter/debian xenial contrib
+deb https://facebook.github.io/mcrouter/debrepo/xenial xenial contrib
