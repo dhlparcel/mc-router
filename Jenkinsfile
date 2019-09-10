@@ -6,7 +6,7 @@ node {
   }
 
   stage('Create docker image') {
-    docker.build("dhlparcel/mc-router:${createTag()}", 'target/docker/stage')
+    docker.build("dhlparcel/mc-router:${createTag()}", '.')
   }
 
   if (env.BRANCH_NAME == 'master') {
