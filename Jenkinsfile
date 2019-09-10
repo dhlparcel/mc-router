@@ -26,7 +26,7 @@ node {
 }
 
 private String createTag() {
-  readFile('version.txt')
+  readFile('version.txt').trim()
 }
 
 private void triggerDeploy(String tag, String environment) {
