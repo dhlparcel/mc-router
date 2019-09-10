@@ -6,7 +6,7 @@ node {
   }
 
   stage('Create docker image') {
-    docker.build("dhlparcel/mc-router:${createTag()}", '--no-cache --rm .')
+    docker.build("dhlparcel/mc-router:${createTag()}", '--no-cache .')
   }
 
   if (env.BRANCH_NAME == 'master') {
